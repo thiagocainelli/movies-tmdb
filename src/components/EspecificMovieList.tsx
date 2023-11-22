@@ -48,7 +48,7 @@ function EspecificMovie() {
                             {especificMovie.release_date}
                         </div>
 
-                        <div className="flex items-center justify-center mt-3">
+                        <div className="flex items-end justify-center h-full mb-5">
                             <Link href="/">
                                 <button className="bg-blue-500 rounded-md p-2 hover:bg-blue-400 hover:scale-105">Voltar a listagem</button>
                             </Link>
