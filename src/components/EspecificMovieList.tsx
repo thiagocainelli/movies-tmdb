@@ -25,7 +25,7 @@ function EspecificMovie() {
     return (
         <>
             {especificMovie && (
-                <div className="bg-zinc-800 flex flex-col md:flex-row gap-3 w-[98%] md:w-[50%] p-3 rounded-md">
+                <div className="bg-zinc-800 flex flex-col md:flex-row gap-3 w-[95%] md:w-[50%] p-2 rounded-md my-3">
 
                     <div className=" flex flex-col items-center w-full md:w-[50%]">
                         <h1 className="ml-3 text-xl font-bold mb-2">{especificMovie.title}</h1>

@@ -23,7 +23,7 @@ function MoviesList () {
     return (
         <section className="flex items-center justify-center flex-wrap gap-8 py-10">
             {data.results.map((movie: any) => (
-                <div className="bg-zinc-800 rounded-md p-3 flex flex-col items-center justify-center border border-transparent transition-all hover:border-zinc-50" key={movie.id}>
+                <div className="bg-zinc-800 rounded-md p-3 flex flex-col items-center justify-center border border-transparent transition-all hover:border-zinc-50 max-w-[95%]" key={movie.id}>
                     <h2 className="mb-4 text-center text-xl font-semibold">{movie.title}</h2>
 
                     <Image className="rounded-md" src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} width={300} height={300} />
