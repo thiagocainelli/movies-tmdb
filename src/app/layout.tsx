@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description: 'Movies TMDb',
 }
 
+
 export default function RootLayout({
   children,
 }: {
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 }

@@ -1,24 +1,23 @@
 "use client";
 
 import { QueryClient, QueryClientProvider } from "react-query"
-import Movies from "./movies/page";
 import Header from "@/components/Header";
+import AllMovies from "@/components/AllMovies";
 
 const client = new QueryClient();
 
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen w-screen max-w-full flex-col items-center bg-zinc-950 text-zinc-50">
-      
-      <QueryClientProvider client={client}>
-        
-        <Header />
+    <QueryClientProvider client={client}>
 
-        <Movies />
-
-      </QueryClientProvider>
+     <main className="flex flex-col items-center min-h-screen w-screen max-w-full  bg-zinc-950 text-zinc-50">
       
+      <Header />
+      <AllMovies />
+
     </main>
+
+    </QueryClientProvider>
   )
 }

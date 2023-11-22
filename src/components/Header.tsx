@@ -1,20 +1,12 @@
 import Link from "next/link"
+import { IconMovie } from "@tabler/icons-react"
 
 function Header () {
     return (
-        <header className="w-full p-5 flex items-center justify-between">
+        <header className="w-full p-5 flex items-center justify-center text-5xl">
             <Link href="/" >
-                <p>Cainelli Movies</p>
+                <p className="flex items-center gap-2"> <IconMovie className="w-12 h-12" /> Cainelli Movies</p>
             </Link>
-            <nav className="flex items-center gap-2">
-               <label htmlFor="search">Pesquisar um filme:</label> 
-               <input 
-                type="text" 
-                id="search" 
-                placeholder="Nome do filme..."
-                className="bg-zinc-800 rounded-md outline-none py-1 px-2"
-                />
-            </nav>
         </header>
     )
 }
