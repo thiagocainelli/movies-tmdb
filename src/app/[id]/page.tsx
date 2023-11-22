@@ -4,6 +4,7 @@ import EspecificMovieList  from "@/components/EspecificMovieList";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const clientQuery = new QueryClient();
+
 function EspecificMovie () {
     return ( 
         <QueryClientProvider client={clientQuery}>
@@ -14,8 +15,7 @@ function EspecificMovie () {
                 <EspecificMovieList />
                 
             </section>
-        </QueryClientProvider>
-        
+        </QueryClientProvider>   
     )
 }
 

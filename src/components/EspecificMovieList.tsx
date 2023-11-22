@@ -6,13 +6,21 @@ import { useParams } from "next/navigation"
 import { fetchMovies } from "@/fetchMovies";
 import { useQuery } from "react-query";
 
+type MoviesProps = {
+    id: number,
+    title: string,
+    poster_path: string,
+    overview: string,
+    vote_average: number,
+    release_date: string
+}
+
 function EspecificMovie() {
 
     const { id } = useParams();
     const { data, isLoading, isError } = useQuery("especificMovie", fetchMovies);
 
-    const especificMovie = data?.results.find((movie: any) => movie.id == id);
-
+    const especificMovie: MoviesProps = data?.results.find((movie: MoviesProps) => movie.id === +id);
 
     if (isLoading) {
         return <p className="text-center text-2xl mt-10">Carregando informações do filme...</p>
@@ -53,13 +61,10 @@ function EspecificMovie() {
                                 <button className="bg-blue-500 rounded-md p-2 hover:bg-blue-400 hover:scale-105">Voltar a listagem</button>
                             </Link>
                         </div>
-                    </div>
-                    
+                    </div> 
                 </div>
             )}
-
         </>
-
     )
 }
 

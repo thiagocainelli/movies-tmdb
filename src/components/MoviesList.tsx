@@ -6,6 +6,13 @@ import { fetchMovies } from "@/fetchMovies"
 import { IconStarFilled } from "@tabler/icons-react";
 import Link from "next/link";
 
+type MoviesProps = {
+    id: number,
+    title: string,
+    poster_path: string,
+    vote_average: number,
+}
+
 function MoviesList () {
 
     const { data, isLoading, isError } = useQuery("movies", fetchMovies)
@@ -22,7 +29,7 @@ function MoviesList () {
 
     return (
         <section className="flex items-center justify-center flex-wrap gap-8 py-10">
-            {data.results.map((movie: any) => (
+            {data.results.map((movie: MoviesProps) => (
                 <div className="bg-zinc-800 rounded-md p-3 flex flex-col items-center justify-center border border-transparent transition-all hover:border-zinc-50 max-w-[95%]" key={movie.id}>
                     <h2 className="mb-4 text-center text-xl font-semibold">{movie.title}</h2>
 
